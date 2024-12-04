@@ -23,7 +23,7 @@ const episodes = [
 
 export const Episodes = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 bg-primary text-primary-foreground">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">Latest Episodes</h2>
         <div className="grid md:grid-cols-3 gap-8">
@@ -35,14 +35,14 @@ export const Episodes = () => {
               transition={{ delay: index * 0.2 }}
               className="bg-card backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <span className="text-sm font-medium text-primary-dark">
+              <span className="text-sm font-medium text-secondary">
                 {episode.date}
               </span>
-              <h3 className="text-xl font-semibold mt-2 mb-3">{episode.title}</h3>
+              <h3 className="text-xl font-semibold mt-2 mb-3 text-primary">{episode.title}</h3>
               <p className="text-gray-600 mb-4">{episode.description}</p>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-500">{episode.duration}</span>
-                <button className="text-primary-dark hover:underline font-medium">
+                <button className="text-secondary hover:underline font-medium">
                   Listen Now
                 </button>
               </div>
