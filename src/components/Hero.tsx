@@ -23,13 +23,23 @@ export const Hero = () => {
         <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Demystifying generative AI and making it accessible for everyone. Join us on a journey to understand and harness the power of artificial intelligence.
         </p>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-secondary text-white px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
-        >
-          Listen Now
-        </motion.button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-secondary text-white px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            Listen Now
+          </motion.button>
+          <motion.a
+            href="mailto:shespoweredbyai@gmail.com"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            Contact Us
+          </motion.a>
+        </div>
       </motion.div>
       <div className="absolute -z-10 w-full h-full">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 backdrop-blur-3xl" />
