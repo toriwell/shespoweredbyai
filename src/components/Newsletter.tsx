@@ -5,14 +5,31 @@ import { useToast } from "../hooks/use-toast";
 export const Newsletter = () => {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Success!",
-      description: "Thank you for subscribing to our newsletter!",
-    });
-    setEmail("");
+    setIsSubmitting(true);
+
+    try {
+      // Create mailto link with pre-filled subject and body
+      const mailtoLink = `mailto:shespoweredbyai@gmail.com?subject=SPBA subscriber&body=New subscriber email: ${email}`;
+      window.location.href = mailtoLink;
+
+      toast({
+        title: "Success!",
+        description: "Thank you for subscribing to our newsletter!",
+      });
+      setEmail("");
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an error subscribing to the newsletter.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -39,10 +56,11 @@ export const Newsletter = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-secondary text-white px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-secondary text-white px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50"
               type="submit"
+              disabled={isSubmitting}
             >
-              Subscribe
+              {isSubmitting ? "Subscribing..." : "Subscribe"}
             </motion.button>
           </form>
         </motion.div>
