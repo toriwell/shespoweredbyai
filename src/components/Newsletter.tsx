@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 export const Newsletter = () => {
   return (
@@ -13,17 +14,12 @@ export const Newsletter = () => {
           <p className="text-gray-600 mb-8">
             Get the latest episodes and AI insights delivered straight to your inbox.
           </p>
-          <div className="w-full max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-4">
-            <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLSecjWdAio9iHvlpFjnqQYEiYnNO1THEG7S0co8sv7BFQrh8Ag/viewform?embedded=true" 
-              width="100%" 
-              height="500px" 
-              className="border-0 mx-auto"
-              title="Newsletter Subscription Form"
-            >
-              Loading...
-            </iframe>
-          </div>
+          <Button
+            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSecjWdAio9iHvlpFjnqQYEiYnNO1THEG7S0co8sv7BFQrh8Ag/viewform', '_blank')}
+            className="bg-secondary hover:bg-secondary/90 text-white px-8 py-6 text-lg rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            Subscribe to Newsletter
+          </Button>
         </motion.div>
       </div>
     </section>
