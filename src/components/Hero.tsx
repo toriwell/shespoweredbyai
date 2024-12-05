@@ -24,13 +24,16 @@ export const Hero = () => {
           Demystifying generative AI and making it accessible for everyone. Join us on a journey to understand and harness the power of artificial intelligence.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <motion.button
+          <motion.a
+            href="https://open.spotify.com/show/0GPwtr1mOLc7ODIf94C3ab?si=d397433c54a3480c"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-secondary text-white px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
           >
             Listen Now
-          </motion.button>
+          </motion.a>
           <motion.a
             href="mailto:shespoweredbyai@gmail.com"
             whileHover={{ scale: 1.05 }}
