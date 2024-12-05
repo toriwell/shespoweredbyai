@@ -18,7 +18,7 @@ export const About = () => {
             We believe that understanding AI shouldn't be limited to tech experts. Through engaging discussions, practical examples, and real-world applications, we're here to help you navigate the exciting world of artificial intelligence with confidence.
           </p>
           <div className="grid md:grid-cols-3 gap-8 text-left">
-            {["Weekly Episodes", "Example Insights", "Practical Tips"].map((feature, index) => (
+            {["Weekly Episodes", "Real-life Insights", "Practical Tips"].map((feature, index) => (
               <motion.div
                 key={feature}
                 initial={{ opacity: 0, y: 20 }}
