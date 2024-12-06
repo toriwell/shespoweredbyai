@@ -15,7 +15,7 @@ export const Hero = () => {
           className="w-48 h-48 mx-auto mb-8"
         />
         <span className="px-4 py-2 bg-secondary text-secondary-foreground text-sm font-medium mb-6 inline-block rounded-full">
-          Welcome to the Future of AI
+          Women in Technology
         </span>
         <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-primary">
           She's Powered by AI
