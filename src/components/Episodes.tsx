@@ -8,10 +8,11 @@ const episodes = [
     date: "Latest Episode",
   },
   {
-    title: "AI in Everyday Life",
-    description: "Discover how AI is already making your life easier.",
+    title: "Introduction",
+    description: "This is a quick introduction to tell you what the podcast is all about",
     duration: "38 min",
     date: "Previous Episode",
+    url: "https://open.spotify.com/episode/5Zj6RQS6fgjrWSSEy9j9Wg?si=8af376987c2e4efb"
   },
   {
     title: "The Future of Work",
@@ -42,9 +43,14 @@ export const Episodes = () => {
               <p className="text-gray-600 mb-4">{episode.description}</p>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-500">{episode.duration}</span>
-                <button className="text-secondary hover:underline font-medium">
+                <a 
+                  href={episode.url || "https://open.spotify.com/show/0GPwtr1mOLc7ODIf94C3ab?si=d397433c54a3480c"} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-secondary hover:underline font-medium"
+                >
                   Listen Now
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}
