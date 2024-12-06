@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 
 const episodes = [
   {
-    title: "Understanding ChatGPT",
-    description: "Dive deep into how ChatGPT works and its practical applications.",
+    title: "Generative AI and Prompting",
+    description: "A quick and easy guide to understanding generative AI and how to use prompts effectively",
     duration: "45 min",
     date: "Latest Episode",
+    url: "https://open.spotify.com/episode/7oqRjNC3NYyrYSysF8dvNx?si=68f6973110dd4c35"
   },
   {
     title: "Introduction",
@@ -15,10 +16,11 @@ const episodes = [
     url: "https://open.spotify.com/episode/5Zj6RQS6fgjrWSSEy9j9Wg?si=8af376987c2e4efb"
   },
   {
-    title: "The Future of Work",
-    description: "How AI is transforming the workplace and what it means for you.",
+    title: "Generative AI and Prompting",
+    description: "A quick and easy guide to understanding generative AI and how to use prompts effectively",
     duration: "42 min",
     date: "Featured Episode",
+    url: "https://open.spotify.com/episode/7oqRjNC3NYyrYSysF8dvNx?si=68f6973110dd4c35"
   },
 ];
 
