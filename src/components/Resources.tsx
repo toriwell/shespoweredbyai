@@ -13,7 +13,14 @@ export const Resources = () => {
           </p>
           <Button 
             variant="default"
-            onClick={() => window.open("/understanding-ai-prompting.pdf")}
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/understanding-ai-prompting.pdf.pdf';
+              link.download = 'understanding-ai-prompting.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
             className="w-full sm:w-auto"
           >
             <FileDown className="mr-2 h-4 w-4" />
