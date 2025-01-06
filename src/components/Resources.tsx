@@ -1,7 +1,32 @@
 import { FileDown } from "lucide-react";
 import { Button } from "./ui/button";
+import { toast } from "@/components/ui/use-toast";
 
 export const Resources = () => {
+  const handleDownload = async () => {
+    try {
+      const response = await fetch('/understanding-ai-prompting.pdf');
+      if (!response.ok) {
+        throw new Error('PDF not found');
+      }
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'understanding-ai-prompting.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Download failed",
+        description: "Could not download the PDF. Please try again later.",
+      });
+    }
+  };
+
   return (
     <section className="py-20 px-4 bg-secondary">
       <div className="max-w-6xl mx-auto">
@@ -14,14 +39,7 @@ export const Resources = () => {
           <div className="flex justify-center">
             <Button 
               variant="default"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/understanding-ai-prompting.pdf';
-                link.download = 'understanding-ai-prompting.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
+              onClick={handleDownload}
               className="w-full sm:w-auto"
             >
               <FileDown className="mr-2 h-4 w-4" />
