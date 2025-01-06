@@ -15,7 +15,7 @@ export const Resources = () => {
             variant="default"
             onClick={() => {
               const link = document.createElement('a');
-              link.href = '/understanding-ai-prompting.pdf.pdf';
+              link.href = '/understanding-ai-prompting.pdf';
               link.download = 'understanding-ai-prompting.pdf';
               document.body.appendChild(link);
               link.click();
