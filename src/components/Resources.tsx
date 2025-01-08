@@ -52,7 +52,7 @@ export const Resources = () => {
           <div className="bg-card backdrop-blur-lg rounded-xl p-6 shadow-lg">
             <h3 className="text-xl font-semibold mb-3">Understanding the generative AI options and how much it costs</h3>
             <p className="text-muted-foreground mb-6">
-              Explore different generative AI options and understand their associated costs.
+              Explore different generative AI options and associated costs.
             </p>
             <div className="flex justify-center">
               <Button 
