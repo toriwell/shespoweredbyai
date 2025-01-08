@@ -50,7 +50,7 @@ export const Resources = () => {
           </div>
 
           <div className="bg-card backdrop-blur-lg rounded-xl p-6 shadow-lg">
-            <h3 className="text-xl font-semibold mb-3">Types of Generative AI and Cost Analysis</h3>
+            <h3 className="text-xl font-semibold mb-3">UNDERSTANDING THE GENERATIVE AI OPTIONS AND HOW MUCH IT COST</h3>
             <p className="text-muted-foreground mb-6">
               Explore different generative AI options and understand their associated costs.
             </p>
