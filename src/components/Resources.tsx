@@ -3,9 +3,9 @@ import { Button } from "./ui/button";
 import { toast } from "@/components/ui/use-toast";
 
 export const Resources = () => {
-  const handleDownload = async () => {
+  const handleDownload = async (pdfPath: string, fileName: string) => {
     try {
-      const response = await fetch('/understanding-ai-prompting.pdf');
+      const response = await fetch(pdfPath);
       if (!response.ok) {
         throw new Error('PDF not found');
       }
@@ -13,7 +13,7 @@ export const Resources = () => {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'understanding-ai-prompting.pdf';
+      link.download = fileName;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -31,20 +31,39 @@ export const Resources = () => {
     <section className="py-20 px-4 bg-secondary">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">Resources</h2>
-        <div className="max-w-2xl mx-auto bg-card backdrop-blur-lg rounded-xl p-6 shadow-lg">
-          <h3 className="text-xl font-semibold mb-3">Understanding AI and the Art of Prompting</h3>
-          <p className="text-muted-foreground mb-6">
-            Download our comprehensive guide to understanding AI and creating effective prompts.
-          </p>
-          <div className="flex justify-center">
-            <Button 
-              variant="default"
-              onClick={handleDownload}
-              className="w-full sm:w-auto"
-            >
-              <FileDown className="mr-2 h-4 w-4" />
-              Download PDF Guide
-            </Button>
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="bg-card backdrop-blur-lg rounded-xl p-6 shadow-lg">
+            <h3 className="text-xl font-semibold mb-3">Understanding AI and the Art of Prompting</h3>
+            <p className="text-muted-foreground mb-6">
+              Download our comprehensive guide to understanding AI and creating effective prompts.
+            </p>
+            <div className="flex justify-center">
+              <Button 
+                variant="default"
+                onClick={() => handleDownload('/understanding-ai-prompting.pdf', 'understanding-ai-prompting.pdf')}
+                className="w-full sm:w-auto"
+              >
+                <FileDown className="mr-2 h-4 w-4" />
+                Download PDF Guide
+              </Button>
+            </div>
+          </div>
+
+          <div className="bg-card backdrop-blur-lg rounded-xl p-6 shadow-lg">
+            <h3 className="text-xl font-semibold mb-3">Types of Generative AI and Cost Analysis</h3>
+            <p className="text-muted-foreground mb-6">
+              Explore different generative AI options and understand their associated costs.
+            </p>
+            <div className="flex justify-center">
+              <Button 
+                variant="default"
+                onClick={() => handleDownload('/Types-of-generative-AI.pdf', 'Types-of-generative-AI.pdf')}
+                className="w-full sm:w-auto"
+              >
+                <FileDown className="mr-2 h-4 w-4" />
+                Download Cost Guide
+              </Button>
+            </div>
           </div>
         </div>
       </div>
