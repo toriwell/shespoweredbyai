@@ -61,7 +61,7 @@ export const Resources = () => {
                 className="w-full sm:w-auto"
               >
                 <FileDown className="mr-2 h-4 w-4" />
-                Download Cost Guide
+                Download PDF Guide
               </Button>
             </div>
           </div>
