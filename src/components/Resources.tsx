@@ -40,7 +40,7 @@ export const Resources = () => {
             <div className="flex justify-center">
               <Button 
                 variant="default"
-                onClick={() => handleDownload('/understanding-ai-prompting.pdf', 'understanding-ai-prompting.pdf')}
+                onClick={() => handleDownload('/understanding-ai-prompting-v2.pdf', 'understanding-ai-prompting.pdf')}
                 className="w-full sm:w-auto"
               >
                 <FileDown className="mr-2 h-4 w-4" />
@@ -57,7 +57,7 @@ export const Resources = () => {
             <div className="flex justify-center">
               <Button 
                 variant="default"
-                onClick={() => handleDownload('/Types-of-generative-AI.pdf', 'Types-of-generative-AI.pdf')}
+                onClick={() => handleDownload('/Types-of-generative-AI-v2.pdf', 'Types-of-generative-AI.pdf')}
                 className="w-full sm:w-auto"
               >
                 <FileDown className="mr-2 h-4 w-4" />
