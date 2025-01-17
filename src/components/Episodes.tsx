@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 
 const episodes = [
   {
-    title: "Generative AI and Prompting",
-    description: "A quick and easy guide to understanding generative AI and how to use prompts effectively",
+    title: "The anatomy of a prompt",
+    description: "A guide to getting better results from AI tools through clear, purposeful communication",
     duration: "5 min",
     date: "Latest Episode",
-    url: "https://open.spotify.com/episode/7oqRjNC3NYyrYSysF8dvNx?si=68f6973110dd4c35"
+    url: "https://open.spotify.com/episode/7ouYlIqVANKW7GsTn2Yfib"
   },
   {
     title: "Introduction",
