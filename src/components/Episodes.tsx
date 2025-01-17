@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const episodes = [
   {
     title: "The anatomy of a prompt",
-    description: "A guide to getting better results from AI tools through clear, purposeful communication",
+    description: "A guide to getting better results from AI tools through clear, purposeful prompt",
     duration: "5 min",
     date: "Latest Episode",
     url: "https://open.spotify.com/episode/7ouYlIqVANKW7GsTn2Yfib"
