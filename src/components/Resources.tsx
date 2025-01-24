@@ -1,4 +1,4 @@
-import { FileDown, Link as LinkIcon } from "lucide-react";
+import { FileDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { toast } from "@/components/ui/use-toast";
 
@@ -25,12 +25,6 @@ export const Resources = () => {
         description: "Could not download the PDF. Please try again later.",
       });
     }
-  };
-
-  const getDirectDownloadUrl = (fileName: string) => {
-    // Using window.location to get the base URL dynamically
-    const baseUrl = window.location.origin;
-    return `${baseUrl}/${fileName}`;
   };
 
   return (
@@ -68,21 +62,6 @@ export const Resources = () => {
               >
                 <FileDown className="mr-2 h-4 w-4" />
                 Download PDF Guide
-              </Button>
-              <Button 
-                variant="outline"
-                onClick={() => {
-                  const url = getDirectDownloadUrl('Types-of-generative-AI.pdf');
-                  navigator.clipboard.writeText(url);
-                  toast({
-                    title: "Link copied!",
-                    description: "Direct download link has been copied to your clipboard.",
-                  });
-                }}
-                className="w-full sm:w-auto"
-              >
-                <LinkIcon className="mr-2 h-4 w-4" />
-                Copy Direct Link
               </Button>
             </div>
           </div>
