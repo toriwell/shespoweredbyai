@@ -58,7 +58,7 @@ export const Resources = () => {
             <div className="flex flex-col sm:flex-row gap-3">
               <Button 
                 variant="default"
-                onClick={() => handleDownload('/Types of generative AI.pdf.pdf', 'Types of generative AI.pdf.pdf')}
+                onClick={() => handleDownload('/types-of-generative-AI.pdf', 'types-of-generative-AI.pdf')}
                 className="w-full sm:w-auto"
               >
                 <FileDown className="mr-2 h-4 w-4" />
