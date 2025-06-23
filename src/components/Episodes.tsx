@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 const episodes = [
   {
     title: "Interview with Dunni Kamson",
-    description: "This episode, we talk with Dunni Kamson, a mum of three, about her ingenious uses of AI.",
-    duration: "5 min",
+    description: "Here some inspiring stores of how Dunni uses AI",
+    duration: "17 min",
     date: "Latest Episode",
     url: "https://open.spotify.com/episode/5eAV3qMTfU2Xdk2ErfoT7w"
   },
