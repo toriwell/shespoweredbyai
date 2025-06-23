@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 
 const episodes = [
   {
-    title: "The anatomy of a prompt",
-    description: "A guide to getting better results from AI tools through clear and specific prompts",
+    title: "Interview with Dunni Kamson",
+    description: "This episode, we talk with Dunni Kamson, a mum of three, about her ingenious uses of AI.",
     duration: "5 min",
     date: "Latest Episode",
-    url: "https://open.spotify.com/episode/7ouYlIqVANKW7GsTn2Yfib"
+    url: "https://open.spotify.com/episode/5eAV3qMTfU2Xdk2ErfoT7w"
   },
   {
     title: "Introduction",
