@@ -1,3 +1,4 @@
+
 import { FileDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { toast } from "@/components/ui/use-toast";
@@ -57,7 +58,7 @@ export const Resources = () => {
             <div className="flex flex-col sm:flex-row gap-3">
               <Button 
                 variant="default"
-                onClick={() => handleDownload('/Types-of-generative-AI.pdf', 'Types-of-generative-AI.pdf')}
+                onClick={() => handleDownload('/Types of generative AI.pdf.pdf', 'Types of generative AI.pdf.pdf')}
                 className="w-full sm:w-auto"
               >
                 <FileDown className="mr-2 h-4 w-4" />
